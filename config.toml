@@ -1,0 +1,11 @@
+baseurl = "http://o.iee.io"
+languageCode = "zh"
+title = "欢迎访问 EE.SUDA courses"
+theme = "hugo-theme-learn"
+MetaDataFormat = "yaml"
+hasCJKLanguage = true
+
+[params]
+  editURL = "https://github.com/su-da/website/edit/master/content/"
+  description = "EE.SUDA courses"
+  author = "Soochow University"
