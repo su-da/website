@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on 欢迎访问 EE.SUDA courses</title>
+    <link>http://o.iee.io/about/</link>
+    <description>Recent content in Abouts on 欢迎访问 EE.SUDA courses</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <atom:link href="http://o.iee.io/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>欢迎访问 EE.SUDA courses</title>
+      <link>http://o.iee.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://o.iee.io/about/</guid>
+      <description>&lt;p&gt;欢迎访问。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
