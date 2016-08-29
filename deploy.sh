@@ -29,6 +29,9 @@ case $1 in
         rsync -a --delete public/ x@10.10.12.73:/usr/local/www/eesuda
         ;;
     *)
-        git subtree push --prefix=public https://github.com/su-da/website.git gh-pages
+        cd public
+        git add -A
+        git commit -m "$msg"
+        git push origin gh-pages
         ;;
 esac
