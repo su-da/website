@@ -1,4 +1,4 @@
-baseurl = "http://o.iee.io"
+baseurl = "http://o.iee.io/"
 languageCode = "zh"
 title = "欢迎访问 EE.SUDA courses"
 theme = "hugo-theme-learn"
