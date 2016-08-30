@@ -19,6 +19,9 @@ toc: true
 {{% button href="/linuxcw2015/session10" %}}Session_10{{% /button %}}
 {{% button href="/linuxcw2015/session11" %}}Session_11{{% /button %}}
 
+[课程教学内容](https://github.com/su-da/linux-cw/blob/master/syllabus.md)；
+[教学进度表](/linuxcw2015/linux-schedule-2015.pdf)。
+
 ## Books
 
 * [相关书籍](http://i.iee.io/tmp/Linux)
