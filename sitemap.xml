@@ -6,15 +6,27 @@
   </url>
   
   <url>
-    <loc>http://o.iee.io/about/</loc>
-  </url>
-  
-  <url>
     <loc>http://o.iee.io/linux/</loc>
   </url>
   
   <url>
+    <loc>http://o.iee.io/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://o.iee.io/linux/2016/</loc>
+  </url>
+  
+  <url>
+    <loc>http://o.iee.io/linux/2015/</loc>
+  </url>
+  
+  <url>
     <loc>http://o.iee.io/labs/</loc>
+  </url>
+  
+  <url>
+    <loc>http://o.iee.io/labs/2015/</loc>
   </url>
   
 </urlset>

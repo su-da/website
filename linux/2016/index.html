@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.16" />
+    <meta name="description" content="EE.SUDA courses">
+<meta name="author" content="Soochow University">
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+    
+    <title>Linux 操作系统(2016)</title>
+    <link href="/css/nucleus.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/hybrid.css" rel="stylesheet">
+    <link href="/css/featherlight.min.css" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/hugo-theme.css" rel="stylesheet">
+    <style type="text/css">:root #header + #content > #left > #rlblock_left
+    {display:none !important;}</style>
+    
+<link href="/css/style.css" rel="stylesheet">
+
+  </head>
+  <body class="" data-url="/linux/2016/">
+    <nav id="sidebar">
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="http://o.iee.io/">
+    <img src="/images/logo.svg" alt="Logo"/>
+    <img src="/images/logo.svg" alt="Logo"/>
+    <img src="/images/logo.svg" alt="Logo"/>
+</a>
+
+      
+    </div>
+</div>
+
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+      
+      
+      
+
+      <li class="dd-item  " data-nav-id="/about/">
+        <a href="/about/">
+          <span>
+            
+             欢迎访问 EE.SUDA courses
+            
+           </span>
+        </a>
+        
+      </li>
+      
+      
+      
+      
+
+      <li class="dd-item  " data-nav-id="/labs/">
+        <a href="/labs/">
+          <span>
+            
+             实验课程
+            
+           </span>
+        </a>
+        
+        <ul>
+          
+          
+          
+          
+            <li class="dd-item " data-nav-id="/labs/2015/">
+              <a href="/labs/2015/">
+                <span>电子技术基础实验(2015)     </i></span>
+              </a>
+            </li>
+          
+          
+        </ul>
+        
+      </li>
+      
+      
+      
+      
+
+      <li class="dd-item  parent" data-nav-id="/linux/">
+        <a href="/linux/">
+          <span>
+            
+             Linux操作系统
+            
+           </span>
+        </a>
+        
+        <ul>
+          
+          
+          
+          
+            <li class="dd-item active" data-nav-id="/linux/2016/">
+              <a href="/linux/2016/">
+                <span>Linux 操作系统(2016)     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/linux/2015/">
+              <a href="/linux/2015/">
+                <span>Linux 操作系统(2015)     </i></span>
+              </a>
+            </li>
+          
+          
+        </ul>
+        
+      </li>
+      
+      
+    </ul>
+    <hr>
+      
+    <section id="footer">
+      <ul>
+        <li>
+          <a href="http://o.iee.io"><i class="fa fa-user"></i> 本站地址</a>
+        </li>
+        <li>
+          <a href="http://i.iee.io"><i class="fa fa-user"></i> 校内镜像</a>
+        </li>
+      </ul>
+    </section>
+  </div>
+</nav>
+
+        <section id="body">
+        <div id="overlay"></div>
+
+        <div class="padding highlightable">
+
+            <div id="top-bar">
+              
+                
+                
+                
+              <div id="top-github-link">
+                  <a class="github-link" href="https://github.com/su-da/website/edit/master/content/linux/2016/index.md" target="blank">
+                    <i class="fa fa-code-fork"></i>
+                    Edit this page
+                  </a>
+              </div>
+                
+              
+              <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                  <span id="sidebar-toggle-span">
+                      <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                        <i class="fa fa-bars"></i>
+                      </a>
+                  </span>
+                
+                <span id="toc-menu"><a href=""><i class="fa fa-list-alt"></i></a></span>
+                
+                
+                
+                
+                  
+                
+                  
+                
+                  
+                    
+                    
+                <a href="/linux/" itemprop="url"><span itemprop="title">Linux操作系统</span></a> <i class="fa fa-angle-right"></i>
+                    
+                  
+                
+                <span itemprop="title"> Linux 操作系统(2016)</span>
+              </div>
+              
+                  <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#slides">Slides</a></li>
+<li><a href="#books">Books</a></li>
+<li><a href="#实验报告">实验报告</a></li>
+<li><a href="#editors">Editors</a></li>
+<li><a href="#远程登录工具">远程登录工具</a></li>
+<li><a href="#在线资源">在线资源</a>
+<ul>
+<li><a href="#你需要它们">你需要它们</a></li>
+<li><a href="#markdown-写作">Markdown 写作</a></li>
+<li><a href="#communities">Communities</a></li>
+<li><a href="#你也可以这样写">你也可以这样写</a></li>
+<li><a href="#在线实验">在线实验</a></li>
+<li><a href="#linux-主机资源">Linux 主机资源</a></li>
+<li><a href="#云开发">云开发</a></li>
+<li><a href="#其他参考">其他参考</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+              
+
+            </div>
+            
+    	        <div id="body-inner">
+                
+                <h1>Linux 操作系统(2016)</h1>
+                
+
+
+
+<h2 id="slides">Slides</h2>
+
+<p><a  href="/linuxcw/session01" target="_blank"  class="btn btn-default">
+  
+  
+  
+  Session_01
+  
+</a>
+
+<a  href="/linuxcw/session02" target="_blank"  class="btn btn-default">
+  
+  
+  
+  Session_02
+  
+</a>
+
+<a  href="/linuxcw/session03" target="_blank"  class="btn btn-default">
+  
+  
+  
+  Session_03
+  
+</a>
+</p>
+
+<h2 id="books">Books</h2>
+
+<ul>
+<li><a href="http://i.iee.io/tmp/Linux">相关书籍</a></li>
+</ul>
+
+<h2 id="实验报告">实验报告</h2>
+
+<ul>
+<li><a href="/tmp/report.pdf">实验报告输出样本</a>
+<a  href="/tmp/posts.pdf" target="_blank"  class="btn btn-default">
+  
+  
+  
+  社区创作打印版
+  
+</a>
+
+<a  href="/tmp/project.pdf" target="_blank"  class="btn btn-default">
+  
+  
+  
+  项目报告例子
+  
+</a>
+
+<a  href="/tmp/project1.pdf" target="_blank"  class="btn btn-default">
+  
+  
+  
+  项目报告例子一
+  
+</a>
+
+<a  href="/tmp/project2.pdf" target="_blank"  class="btn btn-default">
+  
+  
+  
+  项目报告例子二
+  
+</a>
+
+<a  href="/tmp/project3.pdf" target="_blank"  class="btn btn-default">
+  
+  
+  
+  项目报告例子三
+  
+</a>
+</li>
+<li><a  href="https://www.diigo.com/user/xoooox/Linux?type=all&amp;sort=updated" target="_blank"  class="btn btn-default">
+  
+  
+  
+  社区创作
+  
+</a>
+<a href="https://www.diigo.com/rss/user/Xoooox/Linux"> <i class="fa fa-rss"></i> </a></li>
+<li>实验报告写作指导：
+<a  href="http://writingcenter.unc.edu/handouts/scientific-reports/" target="_blank"  class="btn btn-default">
+  
+  
+  
+  Lab_reports
+  
+</a>
+
+<a  href="/tmp/Scientific-Reports-The-Writing-Center.pdf" target="_blank"  class="btn btn-default">
+  
+  
+  
+  Lab_reports
+  
+</a>
+
+<a  href="http://www.writing.utoronto.ca/advice/specific-types-of-writing/lab-report" target="_blank"  class="btn btn-default">
+  
+  
+  
+  Lab_reports
+  
+</a>
+
+<a  href="/tmp/lab-report.pdf" target="_blank"  class="btn btn-default">
+  
+  
+  
+  Lab_reports
+  
+</a>
+
+<a  href="http://writing.engr.psu.edu/workbooks/laboratory.html" target="_blank"  class="btn btn-default">
+  
+  
+  
+  Lab_reports
+  
+</a>
+
+<a  href="http://www.chem.ucla.edu/~gchemlab/labnotebook_web.htm" target="_blank"  class="btn btn-default">
+  
+  
+  
+  Lab_reports
+  
+</a>
+
+<a  href="http://writing.engr.psu.edu/workbooks/labreport.html" target="_blank"  class="btn btn-default">
+  
+  
+  
+  Lab_reports
+  
+</a>
+
+<a  href="/tmp/%e7%94%b5%e8%b7%af%e5%9f%ba%e6%9c%ac%e5%ae%9a%e5%be%8b%e5%ae%9e%e9%aa%8c%e6%8a%a5%e5%91%8a.pdf" target="_blank"  class="btn btn-default">
+  
+  
+  
+  Lab_reports
+  
+</a>
+</li>
+</ul>
+
+<h2 id="editors">Editors</h2>
+
+<ul>
+<li><a href="http://www.vim.org/">Vim</a></li>
+<li><a href="http://code52.org/DownmarkerWPF/">MarkPad</a></li>
+<li><a href="https://atom.io/">Atom</a></li>
+<li><a href="https://code.visualstudio.com/">Code</a></li>
+<li><a href="https://www.sublimetext.com/3">Sublime Text 3 Beta</a></li>
+<li><a href="http://brackets.io/">Brackets</a></li>
+<li><a href="http://foicica.com/textadept/">Textadept</a>;
+<a href="https://notepad-plus-plus.org/">Notepad++</a>;
+<a href="http://www.flos-freeware.ch/notepad2.html">Notepad2</a>;
+<a href="http://www.pnotepad.org/">Programmer&rsquo;s Notepad</a>;
+<a href="http://www.scintilla.org/SciTE.html">SciTE</a>;
+<a href="http://www.geany.org/">Geany</a></li>
+</ul>
+
+<h2 id="远程登录工具">远程登录工具</h2>
+
+<ul>
+<li>SSH</li>
+<li>PuTTY</li>
+<li>App 商店或网上搜索 &ldquo;ssh&rdquo;</li>
+</ul>
+
+<h2 id="在线资源">在线资源</h2>
+
+<h3 id="你需要它们">你需要它们</h3>
+
+<a  href="passgen.html" target="_blank"  class="btn btn-default">
+  
+  
+  
+  密码生成器
+  
+</a>
+
+
+<h3 id="markdown-写作">Markdown 写作</h3>
+
+<ul>
+<li><a href="http://www.jianshu.com/">简书</a></li>
+<li><a href="https://raysnote.com/">Raysnote</a></li>
+<li><a href="https://www.zybuluo.com/">作业部落</a></li>
+<li><a href="https://github.com/">Github</a></li>
+<li><a href="https://bitbucket.org/">Bitbucket</a></li>
+<li><a href="http://pages.tzengyuxio.me/pandoc/">Pandoc’s Markdown 語法中文翻譯</a></li>
+<li><a href="http://pandoc.org/README.html#pandocs-markdown">Pandoc’s Markdown</a></li>
+</ul>
+
+<h3 id="communities">Communities</h3>
+
+<ul>
+<li><a href="http://www.chinaunix.net/">ChinaUnix</a></li>
+<li><a href="http://forum.ubuntu.org.cn/">Ubuntu 论坛</a></li>
+<li><a href="http://newsmth.net">水木社区</a></li>
+<li><a href="https://stackoverflow.com/">Stackoverflow</a></li>
+<li><a href="https://github.com/">Github</a></li>
+<li><a href="https://bitbucket.org/">Bitbucket</a></li>
+<li>&hellip;</li>
+<li><a href="https://www.bing.com/">Bing</a> or <a href="https://www.google.com/">Google</a> Search</li>
+</ul>
+
+<h3 id="你也可以这样写">你也可以这样写</h3>
+
+<p>下面几个网站，其技术内容浅显易懂。看了一些资料后，用自己的理解组织语言
+写出来。可以作为另一份报告的一些参照。这里列的不多，我是想起哪个就添加哪
+个了。</p>
+
+<ul>
+<li><a href="http://www.ruanyifeng.com/blog/">阮一峰的网络日志</a></li>
+</ul>
+
+<h3 id="在线实验">在线实验</h3>
+
+<ul>
+<li><a href="https://www.shiyanlou.com/">实验楼</a></li>
+</ul>
+
+<h3 id="linux-主机资源">Linux 主机资源</h3>
+
+<ul>
+<li><a href="https://koding.com/">Koding</a></li>
+<li><a href="https://c9.io/">Cloud9</a></li>
+<li><a href="https://codenvy.com/">Codenvy</a></li>
+<li><a href="https://codeanywhere.com/">Codeanywhere</a></li>
+<li><a href="https://www.nitrous.io/">Nitrous</a></li>
+</ul>
+
+<h3 id="云开发">云开发</h3>
+
+<ul>
+<li><a href="https://coding.net/">Coding.net</a></li>
+</ul>
+
+<h3 id="其他参考">其他参考</h3>
+
+<ul>
+<li><a href="http://www.idcps.com/news/20140715/75867.html">http://www.idcps.com/news/20140715/75867.html</a></li>
+</ul>
+
+
+      
+      </div>
+    </div>
+
+    <div id="navigation">
+        
+        
+    </div>
+
+    </section>
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/jquery-2.x.min.js"></script>
+    <script src="/js/clipboard.min.js"></script>
+    <script src="/js/perfect-scrollbar.min.js"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="/js/jquery.sticky-kit.min.js"></script>
+    <script src="/js/featherlight.min.js"></script>
+    <script src="/js/html5shiv-printshiv.min.js"></script>
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom.71422.js"></script>
+    <script src="/js/learn.js"></script>
+    <script src="/js/hugo-learn.js"></script>
+    
+
+  </body>
+</html>
+
