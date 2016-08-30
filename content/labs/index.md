@@ -1,6 +1,7 @@
 ---
 chapter: true
 title: 实验课程
+next: 2015
 weight: 10
 ---
 
