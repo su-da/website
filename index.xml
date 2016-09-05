@@ -40,6 +40,10 @@
       <guid>http://o.iee.io/linux/2016/</guid>
       <description>
 
+&lt;h2 id=&#34;本课程活动中心-https-github-com-su-da-linux-cw&#34;&gt;&lt;a href=&#34;https://github.com/su-da/linux-cw&#34;&gt;本课程活动中心&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/su-da/linux-cw&#34;&gt;https://github.com/su-da/linux-cw&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&#34;slides&#34;&gt;Slides&lt;/h2&gt;
 
 &lt;p&gt;&lt;a  href=&#34;http://o.iee.io/linuxcw/session01&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
@@ -750,6 +754,47 @@
 &lt;p&gt;欧姆定律的验证简单吧？中学大概就做过了。可是这么一个简单实验一个多小时完不成甚至要第二周继续做，你觉得哪里有问题不？你想过欧姆定律可以有哪些方法去验证吗？如果你对欧姆表示不服会怎样？如果有人不信欧姆定律你怎样让他服？你能说出欧姆定律比较完整确切的表述吗？你可知道欧姆本人的表述和基尔霍夫对这一定律的描述方式有何不同？可曾知道基尔霍夫两定律 (KCL、KVL) 是他在 21 岁读大学的时候提出的？&lt;/p&gt;
 
 &lt;p&gt;如果这个实验做出来和中学生是一样的，那么我们是否可以理直气壮地质问学校开这个课简直是大骗子呢？&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>电子测量(虚拟仪器)</title>
+      <link>http://o.iee.io/vi-course/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://o.iee.io/vi-course/</guid>
+      <description>
+
+&lt;h2 id=&#34;本课程活动中心-https-github-com-su-da-vi-course&#34;&gt;&lt;a href=&#34;https://github.com/su-da/vi-course&#34;&gt;本课程活动中心&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/su-da/vi-course&#34;&gt;https://github.com/su-da/vi-course&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;slides&#34;&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;&lt;a  href=&#34;http://o.iee.io/vi-course/session01&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+  Session_01
+  
+&lt;/a&gt;
+
+&lt;a  href=&#34;http://o.iee.io/vi-course/session02&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+  Session_02
+  
+&lt;/a&gt;
+
+&lt;a  href=&#34;http://o.iee.io/vi-course/session03&#34; target=&#34;_blank&#34;  class=&#34;btn btn-default&#34;&gt;
+  
+  
+  
+  Session_03
+  
+&lt;/a&gt;
+&lt;/p&gt;
 </description>
     </item>
     
