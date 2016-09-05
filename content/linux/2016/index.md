@@ -6,6 +6,10 @@ weight: 5
 toc: true
 ---
 
+## [本课程活动中心](https://github.com/su-da/linux-cw)
+
+https://github.com/su-da/linux-cw
+
 ## Slides
 
 {{% button href="/linuxcw/session01" %}}Session_01{{% /button %}}
