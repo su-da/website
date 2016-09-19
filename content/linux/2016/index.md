@@ -64,7 +64,7 @@ https://github.com/su-da/linux-cw
 
 ### 你需要它们
 
-{{% button href="passgen.html" %}}密码生成器{{% /button %}}
+{{% button href="../passgen.html" %}}密码生成器{{% /button %}}
 
 ### Markdown 写作
 
