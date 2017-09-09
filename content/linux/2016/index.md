@@ -1,9 +1,6 @@
 ---
 title: Linux 操作系统(2016)
-prev: ..
-next: ../2015
-weight: 5
-toc: true
+weight: 23
 ---
 
 ## [本课程活动中心](https://github.com/su-da/linux-cw)

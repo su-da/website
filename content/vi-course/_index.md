@@ -1,7 +1,6 @@
 ---
 title: 电子测量(虚拟仪器)
-toc: true
-weight: 20
+weight: 30
 ---
 
 ## [本课程活动中心](https://github.com/su-da/vi-course)

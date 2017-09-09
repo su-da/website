@@ -1,8 +1,7 @@
 ---
 chapter: true
 title: Linux操作系统
-next: 2016
-weight: 0
+weight: 20
 ---
 
 # Linux操作系统

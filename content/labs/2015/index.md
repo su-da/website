@@ -1,8 +1,6 @@
 ---
 title: 电子技术基础实验(2015)
-prev: ..
-weight: 10
-toc: true
+weight: 11
 ---
 
 ## 电子技术基础实验
