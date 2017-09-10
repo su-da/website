@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="SEIE, Soochow University">
+  <title>CLI Operations (Continued)</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/print/pdf.css' : '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">CLI Operations (Continued)</h1>
+  <h2 class="author">SEIE, Soochow University</h2>
+  <h3 class="date">Week 04, 2015-2016-1</h3>
+</section>
+
+<section><section id="report-qa" class="titleslide slide level1"><h1>Report Q&amp;A</h1></section><section id="overview" class="slide level2">
+<h1>Overview</h1>
+<ul>
+<li class="fragment">What</li>
+<li class="fragment">How</li>
+<li class="fragment">Get Help</li>
+<li class="fragment">To Help</li>
+</ul>
+</section><section id="process" class="slide level2">
+<h1>Process</h1>
+<ul>
+<li class="fragment">Edit <code>*.md</code> sources
+<ul>
+<li class="fragment">on local host or remote</li>
+</ul></li>
+<li class="fragment"><code>make</code> to get output</li>
+<li class="fragment"><code>exit</code> NOT close the window</li>
+<li class="fragment">Copy <code>report.pdf</code> to local host</li>
+<li class="fragment">Send it</li>
+</ul>
+</section><section id="online-posts" class="slide level2">
+<h1>Online Posts</h1>
+<ul>
+<li class="fragment">Using the same basic Markdown syntax</li>
+<li class="fragment">For further hard-copy ready</li>
+</ul>
+</section><section id="markdown-commons" class="slide level2">
+<h1>Markdown commons</h1>
+<ul>
+<li class="fragment">A space between English and Chinese</li>
+<li class="fragment">Punctuations</li>
+<li class="fragment">Paragraphs separated by blank line</li>
+<li class="fragment">Line breaks by 2 spaces or <code>\</code> ending</li>
+<li class="fragment">No indentation</li>
+<li class="fragment">Indentations and spaces</li>
+<li class="fragment">Numbered list: <code>3. blabla</code> (The space!)</li>
+</ul>
+</section><section class="slide level2">
+
+<pre><code>Para1 line1 汉字内容。
+欢迎来到 Suzhou, the end. Another sentence.
+
+Para2 line1  
+para2 line2
+para2 line3\
+para2 line4</code></pre>
+</section><section class="slide level2">
+
+<p>Para1 line1 汉字内容。 欢迎来到 Suzhou, the end. Another sentence.</p>
+<p>Para2 line1<br />
+para2 line2 para2 line3<br />
+para2 line4</p>
+</section><section id="code-blocks" class="slide level2">
+<h1>Code blocks</h1>
+<p>Screen inputs and outputs</p>
+<ul>
+<li class="fragment">4 spaces indentation</li>
+<li class="fragment">Fenced code blocks
+<ul>
+<li class="fragment">wrapped within <code>```</code> or <code>~~~</code></li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<p>Source</p>
+<pre><code>This is a normal paragraph:
+
+    This is a code block.</code></pre>
+</section><section class="slide level2">
+
+<p>Output</p>
+<p>This is a normal paragraph:</p>
+<pre><code>This is a code block.</code></pre>
+</section><section class="slide level2">
+
+<p>Source</p>
+<pre><code>Here&#39;s an example:
+
+```
+function test() {
+  console.log(&quot;notice the blank line before this function?&quot;);
+}
+```</code></pre>
+</section><section class="slide level2">
+
+<p>Output</p>
+<p>Here's an example:</p>
+<pre><code>function test() {
+  console.log(&quot;notice the blank line before this function?&quot;);
+}</code></pre>
+</section><section id="inline-codes" class="slide level2">
+<h1>Inline Codes</h1>
+<ul>
+<li class="fragment"><p>Inline codes wrapped within <code>`</code></p>
+<pre><code>By executing `./run.sh week04 &amp;`, We get ...</code></pre></li>
+<li class="fragment"><p>By executing <code>./run.sh week04 &amp;</code>, We get ...</p></li>
+</ul>
+</section></section>
+<section><section id="grades-and-credits" class="titleslide slide level1"><h1>Grades and Credits</h1></section><section id="scores" class="slide level2">
+<h1>Scores</h1>
+<ul>
+<li>Lab reports - 45%</li>
+<li>Community posts - 25%</li>
+<li>Projects - 20%</li>
+<li>Overall performance - 10%</li>
+</ul>
+</section><section id="schedules" class="slide level2">
+<h1>Schedules</h1>
+<ul>
+<li class="fragment">Week 04 ~ 07: Commands operations</li>
+<li class="fragment">Week 08: Editors Basic (Vi)</li>
+<li class="fragment">Week 09 ~ 10: Shell scripting programming</li>
+<li class="fragment">Week 11 ~ 13: Linux C programming basics</li>
+<li class="fragment">Week 13 through week 17: projects (Full weekends)</li>
+</ul>
+</section></section>
+<section><section id="commands-operations" class="titleslide slide level1"><h1>Commands Operations</h1></section><section id="guides" class="slide level2">
+<h1>Guides</h1>
+<ul>
+<li>Introduction to Linux (edx.org)</li>
+<li>鸟哥的 Linux 私房菜</li>
+<li>Linux Bible</li>
+<li>Linux Fundamentals</li>
+<li>快乐的 Linux 命令行</li>
+</ul>
+</section><section id="commands-deeper" class="slide level2">
+<h1>Commands Deeper</h1>
+<p>And related concepts. Week 04 ~ Week 07:</p>
+<div class="fragment">
+<pre><code>man; info; help; shutdown; halt; poweroff; reboot; which; whereis;
+whatis; pwd; cd; ls; tree; ln; &lt;; &gt;; &amp;; |; locate; find; grep; ?; *;
+mount; diff; patch; file; cp; rsync; gzip; bzip2; xz; zip; tar; dd; who;
+whoami; id; groups; set; env; export; echo; sleep; history; alias;
+chmod; passwd; sftp; ssh; scp; smbclient; cat; tac; more; less; sort;
+uniq; comm; paste; join; split; fgrep; tr; tee; wc; cut; head; tail;
+strings; ps; top; kill; pstree; w; uptime; bg; fg; jobs; at; crontab;
+date; time; sync; mkdir; rmdir; rm; mv; rename; nl; od; touch; df; du;
+compress; type; unset; unalias; umask; sed; awk; ifconfig; ip addr; ip
+route; ping; traceroute; netstat; lynx; wget; curl; lftp;</code></pre>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/js/head.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/zoom-js/zoom.js', async: true },
+          { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

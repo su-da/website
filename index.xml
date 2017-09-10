@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>欢迎访问 EE.SUDA courses</title>
-    <link>http://o.iee.io/</link>
+    <link>https://o.iee.io/</link>
     <description>Recent content on 欢迎访问 EE.SUDA courses</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="http://o.iee.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://o.iee.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>电子技术基础实验(2015)</title>
-      <link>http://o.iee.io/labs/2015/</link>
+      <link>https://o.iee.io/labs/2015/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://o.iee.io/labs/2015/</guid>
+      <guid>https://o.iee.io/labs/2015/</guid>
       <description>电子技术基础实验 电子技术基础实验说明 预习要求 查找相关资料，掌握实验原理、方法，不要因为对某些知识有点了解而想当然。 进行数据估算。根据器件和实</description>
     </item>
     
     <item>
       <title>Linux 操作系统(2016)</title>
-      <link>http://o.iee.io/linux/2016/</link>
+      <link>https://o.iee.io/linux/2016/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://o.iee.io/linux/2016/</guid>
+      <guid>https://o.iee.io/linux/2016/</guid>
       <description>本课程活动中心 https://github.com/su-da/linux-cw Slides Session_01 Session_02 Session_03 Books 相关书籍 实验报告 实验报告输出样本 社区创作打印版 项目报告例子 项目报告例子一 项目报告例子二 项目报告例子三 社区创作 实验报</description>
     </item>
     
     <item>
       <title>Linux 操作系统(2015)</title>
-      <link>http://o.iee.io/linux/2015/</link>
+      <link>https://o.iee.io/linux/2015/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://o.iee.io/linux/2015/</guid>
+      <guid>https://o.iee.io/linux/2015/</guid>
       <description>Slides Session_01 Session_02 Session_03 Session_04 Session_05 Session_06 Session_07 Session_08 Session_09 Session_10 Session_11 课程教学内容； 教学进度表。 Books 相关书籍 实验报告 实验报告输出样本 社区创作打印版 项目报告例子 项目报告例子一 项目报告例子二 项</description>
     </item>
     

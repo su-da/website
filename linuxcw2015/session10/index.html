@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="SEIE, Soochow University">
+  <title>Makefile; Version Control using git</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #2a211c; color: #bdae9d; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #2a211c; color: #bdae9d; border-right: 1px solid #bdae9d; }
+td.sourceCode { padding-left: 5px; }
+pre, code { color: #bdae9d; background-color: #2a211c; }
+code > span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+code > span.dt { text-decoration: underline; } /* DataType */
+code > span.dv { color: #44aa43; } /* DecVal */
+code > span.bn { color: #44aa43; } /* BaseN */
+code > span.fl { color: #44aa43; } /* Float */
+code > span.ch { color: #049b0a; } /* Char */
+code > span.st { color: #049b0a; } /* String */
+code > span.co { color: #0066ff; font-style: italic; } /* Comment */
+code > span.al { color: #ffff00; } /* Alert */
+code > span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code > span.er { color: #ffff00; font-weight: bold; } /* Error */
+code > span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+code > span.cn { } /* Constant */
+code > span.sc { color: #049b0a; } /* SpecialChar */
+code > span.vs { color: #049b0a; } /* VerbatimString */
+code > span.ss { color: #049b0a; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { } /* Variable */
+code > span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+code > span.op { } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { font-weight: bold; } /* Preprocessor */
+code > span.at { } /* Attribute */
+code > span.do { color: #0066ff; font-style: italic; } /* Documentation */
+code > span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/print/pdf.css' : '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">Makefile; Version Control using <code>git</code></h1>
+  <h2 class="author">SEIE, Soochow University</h2>
+  <h3 class="date">Week 11, 2015-2016-1</h3>
+</section>
+
+<section class="slide level2">
+
+<p>Build automation software</p>
+<ul>
+<li>make-based tools</li>
+<li>Build script generation tools</li>
+<li>CMake</li>
+<li>GNU build system (autotools)</li>
+<li>GYP</li>
+<li>...</li>
+</ul>
+</section>
+<section><section id="makefile" class="titleslide slide level1"><h1><code>Makefile</code></h1></section><section id="ref." class="slide level2">
+<h1>Ref.</h1>
+<p>宋劲杉. Linux C 编程一站式学习</p>
+<ul>
+<li>Makefile 基础</li>
+</ul>
+</section><section id="an-example" class="slide level2">
+<h1>An Example</h1>
+<ul>
+<li><a href="res/main.c">main.c</a></li>
+<li><a href="res/main.h">main.h</a></li>
+<li><a href="res/maze.c">maze.c</a></li>
+<li><a href="res/maze.h">maze.h</a></li>
+<li><a href="res/stack.c">stack.c</a></li>
+<li><a href="res/stack.h">stack.h</a></li>
+</ul>
+</section><section class="slide level2">
+
+<p>Works but not good.</p>
+<pre><code>$ gcc main.c stack.c maze.c -o main</code></pre>
+</section><section class="slide level2">
+
+<p>Two-step approach.</p>
+<pre><code>$ gcc -c main.c
+$ gcc -c stack.c
+$ gcc -c maze.c
+$ gcc main.o stack.o maze.o -o main</code></pre>
+</section><section class="slide level2">
+
+<p>Better practice. Using <code>Makefile</code></p>
+<p><a href="res/Makefile1">Makefile1</a></p>
+<div class="sourceCode"><pre class="sourceCode makefile"><code class="sourceCode makefile"><span class="dv">main:</span><span class="dt"> main.o stack.o maze.o</span>
+	gcc main.o stack.o maze.o -o main
+	
+<span class="dv">main.o:</span><span class="dt"> main.c main.h stack.h maze.h</span>
+	gcc -c main.c
+	
+<span class="dv">stack.o:</span><span class="dt"> stack.c stack.h main.h</span>
+	gcc -c stack.c
+	
+<span class="dv">maze.o:</span><span class="dt"> maze.c maze.h main.h</span>
+	gcc -c maze.c</code></pre></div>
+<p>Type <code>make</code></p>
+</section><section id="makefile-rules" class="slide level2">
+<h1><code>Makefile</code> rules</h1>
+<pre><code>target ... : prerequisites ...
+	command1 command2 ...</code></pre>
+</section><section class="slide level2">
+
+<p><a href="res/Makefile2">Makefile2</a></p>
+<div class="sourceCode"><pre class="sourceCode makefile"><code class="sourceCode makefile"><span class="dv">all:</span><span class="dt"> main</span>
+
+<span class="dv">main:</span><span class="dt"> main.o stack.o maze.o</span>
+	gcc main.o stack.o maze.o -o main
+	
+<span class="dv">main.o:</span><span class="dt"> main.c main.h stack.h maze.h</span>
+	gcc -c main.c
+	
+<span class="dv">stack.o:</span><span class="dt"> stack.c stack.h main.h</span>
+	gcc -c stack.c
+	
+<span class="dv">maze.o:</span><span class="dt"> maze.c maze.h main.h</span>
+	gcc -c maze.c
+
+<span class="dv">clean:</span>
+	<span class="ch">@</span><span class="fu">echo </span><span class="st">&quot;cleanning project&quot;</span>
+	<span class="ch">-</span><span class="fu">rm main *.o</span>
+	<span class="ch">@</span><span class="fu">echo </span><span class="st">&quot;clean completed&quot;</span>
+
+<span class="ot">.PHONY:</span><span class="dt"> clean</span></code></pre></div>
+</section><section class="slide level2">
+
+<div class="sourceCode"><pre class="sourceCode makefile"><code class="sourceCode makefile"><span class="dv">main.o:</span><span class="dt"> main.h stack.h maze.h</span>
+<span class="dv">main.o:</span><span class="dt"> main.c</span>
+	gcc -c main.c</code></pre></div>
+</section><section class="slide level2">
+
+<p><a href="res/Makefile3">Makefile3</a></p>
+<div class="sourceCode"><pre class="sourceCode makefile"><code class="sourceCode makefile"><span class="dv">all:</span><span class="dt"> main</span>
+
+<span class="dv">main:</span><span class="dt"> main.o stack.o maze.o</span>
+	gcc main.o stack.o maze.o -o main
+	
+<span class="dv">main.o:</span><span class="dt"> main.h stack.h maze.h</span>
+<span class="dv">stack.o:</span><span class="dt"> stack.h main.h</span>
+<span class="dv">maze.o:</span><span class="dt"> maze.h main.h</span>
+
+<span class="dv">clean:</span>
+	<span class="ch">-$(</span><span class="dt">RM</span><span class="ch">)</span><span class="fu"> main *.o</span>
+
+<span class="ot">.PHONY:</span><span class="dt"> clean</span></code></pre></div>
+</section><section id="implicit-rules" class="slide level2">
+<h1>Implicit Rules</h1>
+<p><code>make -p</code> to show.</p>
+<div class="sourceCode"><pre class="sourceCode makefile"><code class="sourceCode makefile"><span class="dt">LINK.o </span><span class="ch">=</span><span class="st"> </span><span class="ch">$(</span><span class="dt">CC</span><span class="ch">)</span><span class="st"> </span><span class="ch">$(</span><span class="dt">LDFLAGS</span><span class="ch">)</span><span class="st"> </span><span class="ch">$(</span><span class="dt">TARGET_ARCH</span><span class="ch">)</span>
+
+<span class="dt">OUTPUT_OPTION </span><span class="ch">=</span><span class="st"> -o </span><span class="ch">$@</span>
+
+<span class="dt">CC </span><span class="ch">=</span><span class="st"> cc</span>
+
+<span class="dt">LD </span><span class="ch">=</span><span class="st"> ld</span>
+
+<span class="dt">COMPILE.c </span><span class="ch">=</span><span class="st"> </span><span class="ch">$(</span><span class="dt">CC</span><span class="ch">)</span><span class="st"> </span><span class="ch">$(</span><span class="dt">CFLAGS</span><span class="ch">)</span><span class="st"> </span><span class="ch">$(</span><span class="dt">CPPFLAGS</span><span class="ch">)</span><span class="st"> </span><span class="ch">$(</span><span class="dt">TARGET_ARCH</span><span class="ch">)</span><span class="st"> -c</span>
+
+<span class="dv">%.o:</span><span class="dt"> %.c</span>
+	<span class="ch">$(</span><span class="dt">COMPILE.c</span><span class="ch">)</span> <span class="ch">$(</span><span class="dt">OUTPUT_OPTION</span><span class="ch">)</span> <span class="ch">$&lt;</span></code></pre></div>
+<p><code>%.o: %.c</code> Pattern Rule</p>
+</section><section class="slide level2">
+
+<p>Multiple target. prerequisites centric rules.</p>
+<div class="sourceCode"><pre class="sourceCode makefile"><code class="sourceCode makefile"><span class="dv">all:</span><span class="dt"> main</span>
+
+<span class="dv">main:</span><span class="dt"> main.o stack.o maze.o</span>
+	gcc main.o stack.o maze.o -o main
+	
+<span class="dv">main.o stack.o maze.o:</span><span class="dt"> main.h</span>
+<span class="dv">main.o maze.o:</span><span class="dt"> maze.h</span>
+<span class="dv">main.o stack.o:</span><span class="dt"> stack.h</span>
+
+<span class="dv">clean:</span>
+	<span class="ch">-$(</span><span class="dt">RM</span><span class="ch">)</span><span class="fu"> main *.o</span>
+
+<span class="ot">.PHONY:</span><span class="dt"> clean</span></code></pre></div>
+</section><section id="variables" class="slide level2">
+<h1>Variables</h1>
+<p>Define using <code>= := += ?=</code></p>
+<ul>
+<li><code>$@</code> the target</li>
+<li><code>$&lt;</code> the first prerequisite</li>
+<li><code>$?</code> updated prerequisites</li>
+<li><code>$^</code> all prerequisites</li>
+</ul>
+</section><section class="slide level2">
+
+<p>Variables used by implicit rules.</p>
+<div class="sourceCode"><pre class="sourceCode makefile"><code class="sourceCode makefile"><span class="dt">CC </span><span class="ch">=</span><span class="st"> cc</span>
+<span class="dt">CFLAGS </span><span class="ch">=</span><span class="st"> </span>
+<span class="dt">CPPFLAGS </span><span class="ch">=</span><span class="st"> </span>
+<span class="dt">LD </span><span class="ch">=</span><span class="st"> ld</span>
+<span class="dt">LDFLAGS </span><span class="ch">=</span><span class="st"> </span>
+<span class="dt">TARGET_ARCH </span><span class="ch">=</span><span class="st"> </span>
+<span class="dt">OUTPUT_OPTION </span><span class="ch">=</span><span class="st"> -o </span><span class="ch">$@</span>
+<span class="dt">LINK.o </span><span class="ch">=</span><span class="st"> </span><span class="ch">$(</span><span class="dt">CC</span><span class="ch">)</span><span class="st"> </span><span class="ch">$(</span><span class="dt">LDFLAGS</span><span class="ch">)</span><span class="st"> </span><span class="ch">$(</span><span class="dt">TARGET_ARCH</span><span class="ch">)</span>
+<span class="dt">COMPILE.c </span><span class="ch">=</span><span class="st"> </span><span class="ch">$(</span><span class="dt">CC</span><span class="ch">)</span><span class="st"> </span><span class="ch">$(</span><span class="dt">CFLAGS</span><span class="ch">)</span><span class="st"> </span><span class="ch">$(</span><span class="dt">CPPFLAGS</span><span class="ch">)</span><span class="st"> </span><span class="ch">$(</span><span class="dt">TARGET_ARCH</span><span class="ch">)</span><span class="st"> -c</span>
+<span class="dt">RM </span><span class="ch">=</span><span class="st"> rm -f</span></code></pre></div>
+</section><section class="slide level2">
+
+<p><a href="res/Makefile">Makefile</a> Using variables.</p>
+<div class="sourceCode"><pre class="sourceCode makefile"><code class="sourceCode makefile"><span class="dt">MAINTARGET </span><span class="ch">:=</span><span class="st"> main</span>
+<span class="dt">SOURCE </span><span class="ch">:=</span><span class="st"> main.c stack.c maze.c</span>
+<span class="dt">OBJS </span><span class="ch">:=</span><span class="st"> </span><span class="ch">${</span><span class="dt">SOURCE</span><span class="er">:</span><span class="dt">.c</span><span class="er">=</span><span class="dt">.o</span><span class="ch">}</span>
+
+<span class="dv">all:</span><span class="dt"> </span><span class="ch">$(</span><span class="dt">MAINTARGET</span><span class="ch">)</span>
+
+<span class="dv">$(MAINTARGET):</span><span class="dt"> </span><span class="ch">$(</span><span class="dt">OBJS</span><span class="ch">)</span>
+	<span class="ch">$(</span><span class="dt">LINK.o</span><span class="ch">)</span> <span class="ch">$^</span> <span class="ch">$(</span><span class="dt">OUTPUT_OPTION</span><span class="ch">)</span>
+
+<span class="dv">clean:</span>
+	<span class="ch">-$(</span><span class="dt">RM</span><span class="ch">)</span><span class="fu"> </span><span class="ch">$(</span><span class="dt">MAINTARGET</span><span class="ch">)</span><span class="fu"> </span><span class="ch">$(</span><span class="dt">OBJS</span><span class="ch">)</span>
+
+<span class="ot">.PHONY:</span><span class="dt"> clean</span>
+	
+<span class="dv">main.o stack.o maze.o:</span><span class="dt"> main.h</span>
+<span class="dv">main.o maze.o:</span><span class="dt"> maze.h</span>
+<span class="dv">main.o stack.o:</span><span class="dt"> stack.h</span></code></pre></div>
+</section><section id="make-options" class="slide level2">
+<h1><code>make</code> options</h1>
+<ul>
+<li class="fragment"><code>-n</code> just print, no run</li>
+<li class="fragment"><code>-C dir</code> Change to directory dir before anything else.</li>
+<li class="fragment"><code>make CFLAGS+=-g</code> define variables</li>
+</ul>
+</section><section class="slide level2">
+
+<p><code>diff</code> and <code>patch</code></p>
+<pre><code>$ diff -u mmm.c maze.c
+$ diff -u mmm.c maze.c &gt; pp.patch
+$ patch -b &lt; pp.patch</code></pre>
+</section></section>
+<section><section id="version-control-with-git" class="titleslide slide level1"><h1>Version Control with <code>git</code></h1></section><section id="why-version-control" class="slide level2">
+<h1>Why Version Control</h1>
+<p>Popular version control systems.</p>
+<ul>
+<li>CVS</li>
+<li>subversion (svn)</li>
+<li>mercurial (hg)</li>
+<li>git</li>
+<li>...</li>
+</ul>
+</section><section id="learning" class="slide level2">
+<h1>Learning</h1>
+<ul>
+<li><a href="http://www.ruanyifeng.com/blog/2008/12/a_visual_guide_to_version_control.html">版本控制入门插图教程</a></li>
+<li><a href="http://backlogtool.com/git-guide/cn/intro/intro1_1.html">猴子都能懂的 GIT 入门</a></li>
+<li><a href="https://git-scm.com/book/zh/v2">Pro git 中文版 (第二版)</a></li>
+</ul>
+</section><section id="git---the-simple-guide" class="slide level2">
+<h1><code>git</code> - the simple guide</h1>
+<p><code>git</code> commands</p>
+<pre><code>* init  * status    * diff
+* add   * commit    * log
+* tag   * checkout  * branch
+* merge * clone     * fetch
+* pull  * push      * remote</code></pre>
+</section><section class="slide level2">
+
+<p>just a simple guide for getting started with git. no deep shit ;)</p>
+<p><a href="https://rogerdudler.github.io/git-guide/">git - the simple guide</a></p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/js/head.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/zoom-js/zoom.js', async: true },
+          { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
