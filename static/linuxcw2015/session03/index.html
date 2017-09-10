@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="SEIE, Soochow University">
+  <title>Basic CLI Operations</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/print/pdf.css' : '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">Basic CLI Operations</h1>
+  <h2 class="author">SEIE, Soochow University</h2>
+  <h3 class="date">Week 03, 2015-2016-1</h3>
+</section>
+
+<section><section id="command-line-interface-cli" class="titleslide slide level1"><h1>Command Line Interface (CLI)</h1></section><section id="access" class="slide level2">
+<h1>Access</h1>
+<ul>
+<li class="fragment"><p>Open a Terminal in Desktop GUI</p></li>
+<li class="fragment"><p>Login on Local/Remote Terminal</p></li>
+</ul>
+</section><section id="shell" class="slide level2">
+<h1>Shell</h1>
+<p>Command interpreter, execute programs</p>
+<ul>
+<li class="fragment">sh</li>
+<li class="fragment">bash</li>
+<li class="fragment">zsh</li>
+<li class="fragment">csh</li>
+<li class="fragment">tcsh</li>
+</ul>
+</section><section id="documents" class="slide level2">
+<h1>Documents</h1>
+<ul>
+<li class="fragment"><p><code>man</code> pages</p>
+<pre><code>man man</code></pre></li>
+<li class="fragment"><code>info</code>
+<ul>
+<li class="fragment">sub-command: <code>q</code> <code>h</code> <code>&lt;Enter&gt;</code> <code>n</code> <code>p</code> <code>u</code></li>
+</ul></li>
+<li class="fragment"><p><code>--help</code> <code>-h</code> option</p></li>
+<li class="fragment"><p><code>help</code> build-in shell commands</p></li>
+<li class="fragment"><p><code>/usr/share/doc</code></p></li>
+</ul>
+</section></section>
+<section><section id="remote-access" class="titleslide slide level1"><h1>Remote Access</h1></section><section id="lab-host-go" class="slide level2">
+<h1>Lab host Go</h1>
+<ul>
+<li class="fragment"><code>ssh -X user@go.iee.io</code></li>
+<li class="fragment">SSH Clients
+<ul>
+<li class="fragment">host: go.iee.io</li>
+<li class="fragment">Protocol: ssh 2</li>
+</ul></li>
+</ul>
+</section><section id="password-security" class="slide level2">
+<h1>Password security</h1>
+<ul>
+<li class="fragment">What you know / What you have</li>
+<li class="fragment">Strong passwords</li>
+<li class="fragment">Strongly recommended: 12+</li>
+<li class="fragment"><code>passwd</code>: change password
+<ul>
+<li class="fragment"><code>man passwd</code> or <code>info passwd</code> first</li>
+</ul></li>
+</ul>
+</section><section id="free-linux-hosts" class="slide level2">
+<h1>Free Linux Hosts</h1>
+<p>Online IDE, More than hosts</p>
+<ul>
+<li>Koding <a href="https://koding.com/" class="uri">https://koding.com/</a></li>
+<li>Cloud9 <a href="https://c9.io/" class="uri">https://c9.io/</a></li>
+<li>Codenvy <a href="https://codenvy.com/" class="uri">https://codenvy.com/</a></li>
+<li>Codeanywhere <a href="https://codeanywhere.com/" class="uri">https://codeanywhere.com/</a></li>
+<li>Nitrous <a href="https://www.nitrous.io/" class="uri">https://www.nitrous.io/</a></li>
+</ul>
+</section><section id="materials" class="slide level2">
+<h1>Materials</h1>
+<ul>
+<li class="fragment">Courseware <a href="http://imaker.iee.io/linux" class="uri">http://imaker.iee.io/linux</a></li>
+<li class="fragment">实验楼 <a href="https://www.shiyanlou.com/" class="uri">https://www.shiyanlou.com/</a></li>
+</ul>
+</section></section>
+<section><section id="lab-reports-and-technical-writing" class="titleslide slide level1"><h1>Lab Reports and Technical Writing</h1></section><section id="starting" class="slide level2">
+<h1>Starting</h1>
+<ul>
+<li class="fragment"><code>cp -r /home/EE/go/work ~/</code></li>
+<li class="fragment"><code>cd</code>; <code>chmod 700 work</code></li>
+<li class="fragment"><code>cd work</code></li>
+<li class="fragment">Edit the <code>header.md</code> and <code>work??.md</code> files</li>
+<li class="fragment"><code>make</code> to get <code>report.pdf</code></li>
+<li class="fragment">View the resulting <code>report.pdf</code>
+<ul>
+<li class="fragment"><code>smbclient //go.iee.io/user -U user</code>; <code>cd work</code>; <code>get report.pdf</code></li>
+<li class="fragment"><code>\\go.iee.io</code>; User: <code>ee\user</code></li>
+</ul></li>
+</ul>
+</section><section id="editors" class="slide level2">
+<h1>Editors</h1>
+<ul>
+<li class="fragment"><a href="http://www.vim.org/">Vim</a></li>
+<li class="fragment"><a href="http://code52.org/DownmarkerWPF/">MarkPad</a></li>
+<li class="fragment"><a href="https://atom.io/">Atom</a></li>
+<li class="fragment"><a href="https://www.sublimetext.com/3">Sublime Text 3 Beta</a></li>
+</ul>
+</section><section id="lab-report" class="slide level2">
+<h1>Lab Report</h1>
+<ul>
+<li>实验目的 (Objective)</li>
+<li>引言 (Introduction)</li>
+<li>材料和方法 (Materials and Methods)</li>
+<li>实验过程 (Procedure)</li>
+<li>问题 (Problems)</li>
+<li>实验结果 (Results)</li>
+<li>探讨 (Discussion)</li>
+<li>结论 (Conclusion)</li>
+<li>参考文献 (References)</li>
+<li>附录 (Appendices)</li>
+</ul>
+</section><section id="communities" class="slide level2">
+<h1>Communities</h1>
+<ul>
+<li>ChinaUnix <a href="http://www.chinaunix.net/" class="uri">http://www.chinaunix.net/</a></li>
+<li>Ubuntu 论坛 <a href="http://forum.ubuntu.org.cn/" class="uri">http://forum.ubuntu.org.cn/</a></li>
+<li>水木社区 <a href="http://newsmth.net" class="uri">http://newsmth.net</a></li>
+<li>Stackoverflow <a href="https://stackoverflow.com/" class="uri">https://stackoverflow.com/</a></li>
+<li>Github <a href="https://github.com/" class="uri">https://github.com/</a></li>
+<li>Bitbucket <a href="https://bitbucket.org/" class="uri">https://bitbucket.org/</a></li>
+<li>...</li>
+<li>Bing or Google Search</li>
+</ul>
+</section><section id="online-writing" class="slide level2">
+<h1>Online Writing</h1>
+<p>Markdown for further report-alike formatting.</p>
+<ul>
+<li>简书 <a href="http://www.jianshu.com/" class="uri">http://www.jianshu.com/</a></li>
+<li>Raysnote <a href="https://raysnote.com/" class="uri">https://raysnote.com/</a></li>
+<li>Github <a href="https://github.com/" class="uri">https://github.com/</a></li>
+<li>Bitbucket <a href="https://bitbucket.org/" class="uri">https://bitbucket.org/</a></li>
+</ul>
+</section><section id="reports-submitting" class="slide level2">
+<h1>Reports Submitting</h1>
+<ul>
+<li class="fragment">To: <code>ee@i.iee.io</code></li>
+<li class="fragment">Subject: <code>14284060xx-姓名-report-001</code></li>
+<li class="fragment">Body: What's New, links</li>
+<li class="fragment">Attachments: <code>14284060xx-姓名-report-001.pdf</code></li>
+<li class="fragment">Version number incriments.</li>
+<li class="fragment">Optional: <code>14284060xx-姓名-note-001.pdf</code> other than links</li>
+</ul>
+</section></section>
+<section><section id="scores-and-credits-to-be-discussed" class="titleslide slide level1"><h1>Scores and Credits<br />
+(To Be Discussed)</h1></section></section>
+    </div>
+  </div>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/js/head.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/zoom-js/zoom.js', async: true },
+          { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

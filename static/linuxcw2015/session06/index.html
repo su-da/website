@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="SEIE, Soochow University">
+  <title>CLI Related Concepts</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/print/pdf.css' : '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">CLI Related Concepts</h1>
+  <h2 class="author">SEIE, Soochow University</h2>
+  <h3 class="date">Week 07, 2015-2016-1</h3>
+</section>
+
+<section><section id="networking" class="titleslide slide level1"><h1>Networking</h1></section><section id="network-layer" class="slide level2">
+<h1>Network Layer</h1>
+<figure>
+<img src="res/osi_model_lan.jpg" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="res/73-Network-ISO1.gif" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="res/OSI-TCP-Model-v1.png" />
+</figure>
+</section><section id="layer-addressing" class="slide level2">
+<h1>Layer Addressing</h1>
+<ul>
+<li class="fragment">Ports</li>
+<li class="fragment">IP (Internet Protocol) Addresses</li>
+<li class="fragment">MAC</li>
+</ul>
+</section><section class="slide level2">
+
+<p>MAC</p>
+<p><code>84:18:88:9e:20:a6</code></p>
+</section><section id="ipv4-and-ipv6" class="slide level2">
+<h1>IPv4 and IPv6</h1>
+<ul>
+<li class="fragment">IPv4: 32-bits</li>
+<li class="fragment">IPv6: 128-bits</li>
+</ul>
+<div class="fragment">
+<pre><code>IP address -&gt;        172  .    16  .    31  .      46
+Bit format -&gt;     10101100.00010000.00011111.00101110
+netmask    -&gt;        255  .    255 .   254  .      0
+CID form   -&gt;       172.16.31.46/23</code></pre>
+</div>
+<div class="fragment">
+<pre><code>2001:da8:100a:43::2a/64</code></pre>
+</div>
+</section><section id="ip-address-allocation" class="slide level2">
+<h1>IP Address Allocation</h1>
+<ul>
+<li class="fragment">static/Manual</li>
+<li class="fragment">Automatic
+<ul>
+<li class="fragment">DHCP or DHCPv6</li>
+<li class="fragment">stateless autoconfiguration</li>
+</ul></li>
+<li class="fragment">link local
+<ul>
+<li class="fragment">169.254.0.0/16</li>
+<li class="fragment">fe80::/64</li>
+</ul></li>
+</ul>
+</section><section id="name-resolution" class="slide level2">
+<h1>Name Resolution</h1>
+<ul>
+<li class="fragment">Domain Name to IP address</li>
+<li class="fragment">Domain Name System (DNS)</li>
+<li class="fragment">Client utils: <code>host</code> and <code>dig</code>; <code>/etc/resolv.conf</code></li>
+</ul>
+</section><section id="network-interfaces" class="slide level2">
+<h1>Network Interfaces</h1>
+<ul>
+<li class="fragment">List network interface card (NIC) info: <code>ifconfig</code></li>
+<li class="fragment">Linux <code>ip</code> utilties: <code>ip link</code>; <code>ip addr</code>; <code>ip route</code> ...</li>
+<li class="fragment"><code>ping</code></li>
+<li class="fragment"><code>route</code>; <code>traceroute</code></li>
+<li class="fragment"><code>netstat</code></li>
+</ul>
+</section><section id="network-applications" class="slide level2">
+<h1>Network Applications</h1>
+<ul>
+<li class="fragment"><code>wget</code>; <code>curl</code></li>
+<li class="fragment"><code>ssh</code>; <code>scp</code></li>
+</ul>
+</section></section>
+<section><section id="hash-function" class="titleslide slide level1"><h1>Hash function</h1></section><section id="hash-function-1" class="slide level2">
+<h1>Hash function</h1>
+<ul>
+<li class="fragment">Function to map any size data to data of fixed size</li>
+<li class="fragment">Return hashes/hash values/hash sums</li>
+<li class="fragment">Search; Data integrity; Cryptography</li>
+<li class="fragment">checksums, fingerprints</li>
+</ul>
+</section><section id="cryptographic-hash-function" class="slide level2">
+<h1>Cryptographic hash function</h1>
+<ul>
+<li class="fragment">one-way Hash functions</li>
+<li class="fragment">Practically impossible to invert, get input data from hashes</li>
+<li class="fragment">Hashes uniquely identifies original data: fingerprint</li>
+</ul>
+</section><section id="common-hash-functions" class="slide level2">
+<h1>Common hash functions</h1>
+<ul>
+<li class="fragment"><em>MD5</em></li>
+<li class="fragment"><em>SHA-1</em></li>
+<li class="fragment">SHA-256; SHA-512</li>
+<li class="fragment">SHA-224; SHA-384</li>
+</ul>
+</section></section>
+<section><section id="backus-naur-form" class="titleslide slide level1"><h1>Backus-Naur Form</h1></section><section class="slide level2">
+
+<pre><code>ls [OPTION]... [FILE]...
+host [-aCdlnrsTwv] [-c class] [-N ndots] [-R number] [-t type]
+        [-W wait] [-m flag] [-4] [-6] {name} [server]
+stone [-C &lt;file&gt;] [-P &lt;command&gt;] [-Q &lt;options&gt;] [-N] [-d] [-p] [-n]
+      [-u &lt;max&gt;] [-f &lt;n&gt;] [-l] [-L &lt;file&gt;] [-a &lt;file&gt;] [-i &lt;file&gt;]
+      [-X &lt;n&gt;] [-T &lt;n&gt;] [-A &lt;n&gt;] [-r]
+      [-x &lt;port&gt;[,&lt;port&gt;][-&lt;port&gt;]... &lt;xhost&gt;... --]
+      [-s &lt;send&gt; &lt;expect&gt;... --]
+      [-b [&lt;var&gt;=&lt;val&gt;]... &lt;n&gt; &lt;master&gt;:&lt;port&gt; &lt;backup&gt;:&lt;port&gt;]
+      [-B &lt;host&gt;:&lt;port&gt; &lt;host1&gt;:&lt;port1&gt;... --]
+      [-I &lt;host&gt;]
+      [-o &lt;n&gt;] [-g &lt;n&gt;] [-t &lt;dir&gt;] [-D] [-c &lt;dir&gt;]
+      [-q &lt;SSL&gt;] [-z &lt;SSL&gt;]
+      [-M install &lt;name&gt;] [-M remove &lt;name&gt;]
+      &lt;st&gt; [-- &lt;st&gt;]...   </code></pre>
+</section><section id="bnf" class="slide level2">
+<h1>BNF</h1>
+<ul>
+<li class="fragment">Notation techniques to describe syntax</li>
+<li class="fragment">Extended Backus-Naur Form (EBNF), ISO/IEC 14977</li>
+<li class="fragment"><a href="res/BNF.pdf">BNF and EBNF</a></li>
+</ul>
+</section></section>
+<section><section id="regular-expression" class="titleslide slide level1"><h1>Regular Expression</h1></section><section id="regular-expression-1" class="slide level2">
+<h1>Regular Expression</h1>
+<p>Sequence of characters define a search pattern, string matching.</p>
+<p>Found in text editors, text processing utilities and programming languages.</p>
+<ul>
+<li class="fragment"><code>^[ \t]+|[ \t]+$</code></li>
+<li class="fragment"><code>^[+-]?(\d+(\.\d+)?|\.\d+)([eE][+-]?\d+)?$</code></li>
+<li class="fragment">IEEE POSIX standard: BRE (Basic), ERE (Extended)</li>
+<li class="fragment">PCRE (Perl Compatible Regular Expressions)</li>
+<li class="fragment"><a href="res/regex.pdf">Regular Expressions</a></li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/js/head.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/zoom-js/zoom.js', async: true },
+          { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
