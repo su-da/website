@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://oiee.netlify.com/* https://o.iee.io/:splat 301!
