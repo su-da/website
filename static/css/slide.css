@@ -1,0 +1,30 @@
+.reveal {
+  font-family: "Source Sans Pro",SF Pro Text,SF Pro Icons,Segoe UI,SegoeUI,Atlas Grotesk,Helvetica Neue,Helvetica,SF Pro SC,PingFang SC,Source Han Sans CN,Source Han Sans SC,Microsoft YaHei,sans-serif;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  font-family: Roboto,SF Pro Text,SF Pro Icons,Segoe UI,SegoeUI,Atlas Grotesk,Helvetica Neue,Helvetica,SF Pro SC,PingFang SC,DengXian,Source Han Sans CN,Source Han Sans SC,Microsoft YaHei,sans-serif;
+  text-transform: unset;
+}
+
+.reveal blockquote {
+  width: 80%;
+  font-style: unset;
+}
+
+.reveal .slides .text-left {
+  text-align: initial;
+}
+
+.reveal .slides .text-right {
+  text-align: right;
+}
+
+.caption-text {
+  font-size: 71.42857%;
+  font-family: Palatino, Palatino Linotype, serif;
+}
+
+.reveal .slides section .highlight-goldenrod {
+  color: goldenrod;
+}
