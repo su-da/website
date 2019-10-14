@@ -28,3 +28,29 @@
 .reveal .slides section .highlight-goldenrod {
   color: goldenrod;
 }
+
+@media print {
+.reveal .slides section {
+  page-break-after: unset !important;
+  padding: unset !important;
+}
+.reveal .slides section .highlight-goldenrod {
+  color: unset;
+}
+body, p, td, li, div {
+  font-family: "Minion 3 Display",Minion Pro Display,Palatino,Palatino Linotype,Times,FZYaSong-R-GBK,Songti SC,STSong,SimSun,serif !important;
+}
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  font-family: "Minion 3 Display",Minion Pro Display,Palatino,Palatino Linotype,Times,FZYaSong-R-GBK,Songti SC,STSong,SimSun,serif !important;
+  margin: 10px 0 20px 0;
+}
+.reveal aside.notes {
+  display: unset;
+  font-size: 12pt !important;
+  font-family: WilliamsCaslonText,Adobe Caslon Pro,"Minion 3",Minion Pro,EB Garamond,Palatino,Palatino Linotype,Times,HYShuSongErS,FZLanTingKanSongK,FZYaSong-EL-GBK,Songti SC,STSong,FZShuSong-Z01,SimSun,serif !important;
+}
+.reveal aside.notes p {
+  font-size: 12pt !important;
+  font-family: WilliamsCaslonText,Adobe Caslon Pro,"Minion 3",Minion Pro,EB Garamond,Palatino,Palatino Linotype,Times,HYShuSongErS,FZLanTingKanSongK,FZYaSong-EL-GBK,Songti SC,STSong,FZShuSong-Z01,SimSun,serif !important;
+}
+}
