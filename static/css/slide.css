@@ -25,6 +25,10 @@
   font-family: Palatino, Palatino Linotype, serif;
 }
 
+.reveal .slides section .highlight-green {
+  color: #17ff2e;
+}
+
 .reveal .slides section .highlight-goldenrod {
   color: goldenrod;
 }
@@ -34,6 +38,7 @@
   page-break-after: unset !important;
   padding: unset !important;
 }
+.reveal .slides section .highlight-green,
 .reveal .slides section .highlight-goldenrod {
   color: unset;
 }
