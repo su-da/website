@@ -63,4 +63,10 @@ body, p, td, li, div {
   font-size: 12pt !important;
   font-family: WilliamsCaslonText,Adobe Caslon Pro,"Minion 3",Minion Pro,EB Garamond,Palatino,Palatino Linotype,Times,HYShuSongErS,FZLanTingKanSongK,FZYaSong-EL-GBK,Songti SC,STSong,FZShuSong-Z01,SimSun,serif !important;
 }
+.reveal ol {
+  margin: 0 0 0 1.5em;
+}
+a:link, a:visited {
+  text-decoration: unset;
+}
 }
