@@ -33,6 +33,11 @@
   color: goldenrod;
 }
 
+.reveal .slides section .img-right {
+  width: 40%;
+  float: right;
+}
+
 @media print {
 .reveal .slides section {
   page-break-after: unset !important;
