@@ -50,6 +50,9 @@
 body, p, td, li, div {
   font-family: "Minion 3 Display",Minion Pro Display,Palatino,Palatino Linotype,Times,FZYaSong-R-GBK,Songti SC,STSong,SimSun,serif !important;
 }
+aside.notes li {
+  font-size: unset !important;
+}
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   font-family: "Minion 3 Display",Minion Pro Display,Palatino,Palatino Linotype,Times,FZYaSong-R-GBK,Songti SC,STSong,SimSun,serif !important;
   margin: 10px 0 20px 0;
